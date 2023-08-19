@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CCAP System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="images\bg-ind.mp4" type="video/mp4"> 
+    </video>
+    <h1 align="center">Credit Card Approval Prediction</h1>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images\credit-card-ind.png" alt="Logo Icon">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Our Website</h1>
+            <p>We offer the best services for you!</p>
+            <div class="login-container">
+                <h2>Log in to Account</h2>
+                <form id="loginForm" action="index1.html" method="post">
+                    <label style="color: black;" for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+        
+                    <label style="color: black;" for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+        
+                    <a align="center"><input href="index1.html" class="cta-btn" type="submit" value="Log in"></a>
+                </form>
+                <script>
+                    document.getElementById("loginForm").addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        const username = document.getElementById("username").value;
+                        const password = document.getElementById("password").value;
+            
+                        // Replace these with your actual valid credentials
+                        const validUsername = "Vamshi_09";
+                        const validPassword = "123456";
+            
+                        if (username === validUsername && password === validPassword) {
+                            window.location.href = "index1.html";
+                        } else {
+                            alert("Invalid username or password. Please try again.");
+                        }
+                    });
+                </script>
+            <div class="additional-links">
+                <a href="/Signup">Sign Up</a>  
+            <a href="/forgot_password">Forgot Password?</a>
+            </div>
+        </div>
+        </section>
+        <section class="aboutus">
+            <h2 align="center">About Us</h2>
+            <p align="center">Description....</p>
+            <img src="images\All Cards Desc-ind.png" alt="Description Image 1">
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Credit Card Prediction</li>
+                <li>Credit Card Approval</li>
+                <li>Credit Card Issurance</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

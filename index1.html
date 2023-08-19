@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Apply for CC</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="images\bg-ind1.mp4" type="video/mp4"> 
+    </video>
+    <div class="container">
+        <img src="images\credit card ind12.png" alt="Image">
+        <div class="terms">
+            <h2 style="color: whitesmoke" align="center">Terms and Conditions</h2>
+            <p style="color: whitesmoke" align="center">Here are some terms and conditions...</p>
+            
+                <div align="center" class="checkbox-container">
+                    <label>
+                        <input style="color: whitesmoke;" type="checkbox" id="acceptCheckbox">
+                        <a style="color: whitesmoke">I accept the terms and conditions</a>
+                    </label>
+                
+                <button class="cta-btn" id="applyButton" disabled>Apply</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const acceptCheckbox = document.getElementById("acceptCheckbox");
+        const applyButton = document.getElementById("applyButton");
+
+        acceptCheckbox.addEventListener("change", function() {
+            applyButton.disabled = !acceptCheckbox.checked;
+        });
+
+        applyButton.addEventListener("click", function() {
+            // Redirect to the next page here
+            alert("You have accepted the terms and conditions. Redirecting to the next page...");
+            window.location.href = "index2.html";
+            // Add code to redirect the user to the next page
+        });
+    </script>
+</body>
+
+</html>
